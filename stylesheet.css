@@ -1,0 +1,86 @@
+body {
+  font-family: 'Shadows Into Light', cursive;
+  background-image: url(images/background.svg);
+}
+
+.something {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+
+.something h1 {
+  font-size: 4em;
+  margin-bottom: 0.125em;
+}
+
+.something h2 {
+  font-size: 2em;
+  margin: 0;
+}
+
+.title {
+  animation-duration: 4s;
+  animation-name: title;
+  animation-fill-mode: both;
+}
+
+.subtitle {
+  animation-delay: 4s;
+  animation-duration: 2s;
+  animation-name: subtitle;
+  animation-fill-mode: backwards;
+}
+
+.something {
+  animation-delay: 6s;
+  animation-duration: 2s;
+  animation-name: wobble;
+  animation-iteration-count: infinite;
+}
+
+@keyframes title {
+  0% {
+    font-size: 0.5em;
+    transform: rotate(1800deg);
+  }
+  25% {
+    font-size: 2em;
+  }
+  50% {
+    font-size: 5em;
+  }
+  100% {
+    font-size: 4em;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes subtitle {
+  0% {
+    transform: translate(000px, 1500px) skewX(90deg)
+  }
+  100% {
+    transform: translate(000px, 000px) skewX(0deg)
+  }
+}
+
+@keyframes wobble {
+  0% {
+    transform: skewX(20deg);
+  }
+  50% {
+    transform: skewX(-20deg);
+  }
+  100% {
+    transform: skewX(20deg);
+  }
+}
+
+
+@media (max-width: 400px) {
+  .something {
+    font-size: 24px;
+  }
+}
+
